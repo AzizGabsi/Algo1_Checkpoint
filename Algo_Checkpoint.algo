@@ -1,0 +1,26 @@
+ALGORITHM sentenceAnalysis
+VAR
+    stri: STRING
+    NBC,NBV,NBW : INTEGER:= 0
+    i:INTEGER
+BEGIN
+    write("please enter a sentence")
+   
+    WHILE (stri(i)<>".") DO
+        read(stri)
+        NBC:=NBC+1
+        
+        IF (stri(i) = ("a","y","e","u","o","i") ) THEN
+            NBV:=NBV+1
+        END_IF
+
+        IF (stri(i) = " ") THEN
+            NBW:=NBW+1
+        END_IF
+
+    END_WHILE
+
+    write(NBC)
+    write(NBV)
+    write(NBW)
+END
